@@ -3,12 +3,12 @@ import sys
 
 filename = 'bd_corta.csv'
 output_name = 'out.sql'
-db_name = 'table'
+table_name = 'table'
 
-#This function prints the first command of the SQL file (INSERT INTO db_name (column1, column2...)
+#This function prints the first command of the SQL file (INSERT INTO table_name (column1, column2...)
 #It gets the column1, column2, ..., columnN from
 def printHeader(columns):
-    print 'INSERT INTO `'+db_name+'` (',
+    print 'INSERT INTO `'+table_name+'` (',
     for field in columns:
         if field == columns[-1]:
             print '`' + field + '`) VALUES'
