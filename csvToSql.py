@@ -1,7 +1,7 @@
 import csv
 import sys
 
-filename = 'input.csv'
+filename = 'bd_corta.csv'
 output_name = 'out.sql'
 db_name = 'table'
 
@@ -22,9 +22,9 @@ def printData(data):
         print '(',
         for field in row:
             if field == row[-1]:
-                print "'" + field + "' ,",
-            else:
                 print "'" + field + "'",
+            else:
+                print "'" + field + "',",
         print '),'
 
 sys.stdout = open(output_name, 'w')
