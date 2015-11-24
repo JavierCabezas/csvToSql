@@ -20,11 +20,11 @@ def printHeader(columns):
 def printData(data):
     for row in data:
         print '(',
-        for field in row:
-            if field == row[-1]:
-                print "'" + field + "'",
-            else:
+        for i, field in enumerate(row):
+            if i < len(row)-1:
                 print "'" + field + "',",
+            else:
+                print "'" + field + "'",
         print '),'
 
 sys.stdout = open(output_name, 'w')
